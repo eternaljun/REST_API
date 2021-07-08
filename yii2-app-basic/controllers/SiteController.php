@@ -93,7 +93,7 @@ class SiteController extends Controller
                 $model->surname = !empty($_POST['surname']) ? $_POST['surname'] : NULL;
                 $model->phone = !empty($_POST['phone']) ? $_POST['phone'] : NULL;
                 $model->password = $_POST['password'];
-                $model->register_date = date('d-m-Y H:i:s');
+                $model->register_date = date('Y-m-d H:i:s');
             } else {
                 Yii::$app->response->setStatusCode(422);
                 return 'Заполните email и пароль!';
